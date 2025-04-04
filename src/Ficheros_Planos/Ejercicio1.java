@@ -18,7 +18,7 @@ public class Ejercicio1 {
 	BufferedWriter out = null;
 	
 	try {
-		out = new BufferedWriter(new FileWriter("datos.txt"));
+		out = new BufferedWriter(new FileWriter("datos.txt", true));
 		out.write(nombre);
 		out.newLine();
 		out.write(edad);

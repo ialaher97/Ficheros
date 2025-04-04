@@ -35,8 +35,8 @@ public class Ejercicio2 {
 				otro= br1.readLine();
 			}
 			System.out.println("Fichero escrito");
-			System.out.println(numeros);
 			Collections.sort(numeros);
+			System.out.println(numeros);
 			
 			} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -52,24 +52,11 @@ public class Ejercicio2 {
 			}
 		}
 		
-		Iterator<Integer> it = numeros.iterator();
-		TreeSet<Integer> numerosOrdenados = new TreeSet<>();
-		
-		while(it.hasNext()) {
-			int numero = it.next();
-			numerosOrdenados.add(numero);
-				
-			}
 		BufferedWriter bw = null;
 		
 		try {
 			 bw = new BufferedWriter(new FileWriter("enterosOrdenados.txt"));
-			 String letra;
-			 while(it.hasNext()) {
-				 int numero = it.next();
-				 bw.write(numero);
-				 bw.newLine();
-			 }
+			 bw.write(numeros.toString());
 			 System.out.println("Texto escrito");
 			
 		} catch (IOException e) {
