@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ClubAcademico>
+    <listaAcademicos>
+        <academico>
+            <nombre_academico>Juan</nombre_academico>
+            <año_ingreso>1990</año_ingreso>
+        </academico>
+        <academico>
+            <nombre_academico>María</nombre_academico>
+            <año_ingreso>2020</año_ingreso>
+        </academico>
+    </listaAcademicos>
+    <nombre>club ajedrez</nombre>
+    <miembros>50</miembros>
+</ClubAcademico>
