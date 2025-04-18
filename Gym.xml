@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Gym>
+    <nombre>Alfarelo</nombre>
+    <listaUsuarios>
+        <usuario>
+            <nombre>Jose</nombre>
+            <ID>1</ID>
+        </usuario>
+        <usuario>
+            <nombre>Marta</nombre>
+            <ID>2</ID>
+        </usuario>
+        <usuario>
+            <nombre>Pedro</nombre>
+            <ID>3</ID>
+        </usuario>
+        <usuario>
+            <nombre>Alberto</nombre>
+            <ID>4</ID>
+        </usuario>
+    </listaUsuarios>
+</Gym>

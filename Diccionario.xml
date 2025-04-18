@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Diccionario>
+    <ListaPalabras>
+        <Palabra>
+            <Significado>hola</Significado>
+            <Sinonimos>despedida</Sinonimos>
+        </Palabra>
+        <Palabra>
+            <Significado>Roberto</Significado>
+            <Sinonimos>nombre</Sinonimos>
+        </Palabra>
+    </ListaPalabras>
+</Diccionario>

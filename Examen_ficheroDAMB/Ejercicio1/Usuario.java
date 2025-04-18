@@ -1,4 +1,4 @@
-package Examen_ficheroDAmB;
+package Ejercicio1;
 
 public class Usuario implements Comparable<Usuario>{
 	private String dni;
