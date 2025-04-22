@@ -1,10 +1,24 @@
 package Ejercicio1;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
+
+@XmlRootElement(name="Paciente")
+@XmlType(propOrder = {"dni","nombreCompleto","telefono","fechaDeCita","tratamiento"})
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Paciente implements Comparable <Paciente>{
+	@XmlAttribute(name="DNI")
 	private String dni;
+	@XmlAttribute(name="nombreCompleto")
 	private String nombreCompleto;
+	@XmlAttribute(name="telefono")
 	private int telefono;
+	@XmlAttribute(name="fechaDeCita")
 	private String fechaDeCita;
+	@XmlAttribute(name="tratamiento")
 	private String tratamiento;
 	
 	public String getDni() {

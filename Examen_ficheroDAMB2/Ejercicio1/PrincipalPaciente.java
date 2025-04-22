@@ -24,15 +24,14 @@ public class PrincipalPaciente {
 		try {
 			br = new BufferedReader(new FileReader("Pacientes.txt"));
 			String linea = br.readLine();
-			if(linea != null) {
-			String[] array = linea.split(", ");
-			while (linea != null) {
-				Paciente p = new Paciente(array[0], array[1], Integer.parseInt(array[2]),(array[3]),
-						array[4]);
-				pacientes.add(p);
-				linea = br.readLine();
-			}
-			Collections.sort(pacientes);
+			if (linea != null) {
+				String[] array = linea.split(", ");
+				while (linea != null) {
+					Paciente p = new Paciente(array[0], array[1], Integer.parseInt(array[2]), (array[3]), array[4]);
+					pacientes.add(p);
+					linea = br.readLine();
+				}
+				Collections.sort(pacientes);
 			}
 			System.out.println(pacientes);
 		} catch (FileNotFoundException e) {
@@ -77,48 +76,53 @@ public class PrincipalPaciente {
 				Iterator it = pacientes.iterator();
 				BufferedWriter bw = null;
 				boolean encontrado = false;
-				if(pacientes.isEmpty()) {
+				if (pacientes.isEmpty()) {
 					Paciente nuevo = new Paciente(dni, nombre, telefono, fecha, tratamiento);
 					pacientes.add(nuevo);
+					System.out.println("Paciente añadido a la lista");
+					System.out.println();
 
-					
-				}else {
-				while (it.hasNext()) {
-					Paciente p = (Paciente) it.next();
+				} else {
+					while (it.hasNext()) {
+						Paciente p = (Paciente) it.next();
 
-					if (p.getDni().equals(dni)) {
-						System.out.println("El paciente ya se encuentra en la lista");
-						encontrado = true;
+						if (p.getDni().equals(dni)) {
+							System.out.println("El paciente ya se encuentra en la lista");
+							System.out.println();
+							encontrado = true;
 
-					} else if(!encontrado) {
-						Paciente nuevo = new Paciente(dni, nombre, telefono, fecha, tratamiento);
-						pacientes.add(nuevo);
+						} else if (!encontrado) {
+							Paciente nuevo = new Paciente(dni, nombre, telefono, fecha, tratamiento);
+							pacientes.add(nuevo);
+							System.out.println("Paciente añadido a la lista");
+							System.out.println();
+						}
 					}
-						
+				}
 
+				try {
+					bw = new BufferedWriter(new FileWriter("Pacientes.txt", true));
+					for (int i = 0; i < pacientes.size(); i++) {
+						bw.write(pacientes.get(i).getDni() + ", " + pacientes.get(i).getNombreCompleto() + ", "
+								+ pacientes.get(i).getTelefono() + ", " + pacientes.get(i).getFechaDeCita() + ", "
+								+ pacientes.get(i).getTratamiento());
+						bw.newLine();
+					}
+					Collections.sort(pacientes);
+					System.out.println("Fichero Pacientes.txt Actualizada");
+
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} finally {
+					if (bw != null) {
 						try {
-							bw = new BufferedWriter(new FileWriter("Pacientes.txt", false));
-							for (int i = 0; i < pacientes.size(); i++) {
-								bw.write(pacientes.get(i).getDni() + ", " + pacientes.get(i).getNombreCompleto() + ", "
-										+ pacientes.get(i).getTelefono() + ", " + pacientes.get(i).getFechaDeCita()
-										+ ", " + pacientes.get(i).getTratamiento());
-								bw.newLine();
-							}
-							Collections.sort(pacientes);
-							System.out.println("Fichero Pacientes.txt Actualizada");
-
+							bw.flush();
+							bw.close();
 						} catch (IOException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
-						} finally {
-							if (bw != null) {
-								try {
-									bw.close();
-								} catch (IOException e) {
-									// TODO Auto-generated catch block
-									e.printStackTrace();
-								}
-							}
+
 						}
 
 					}
@@ -127,7 +131,7 @@ public class PrincipalPaciente {
 
 			if (opcion.equals("2")) {
 				System.out.println("Dime el DNI del paciente a eliminar de la lista");
-				String dni = sc.nextLine();
+				String dni = sc.next();
 				boolean encontrado = false;
 				Iterator it = pacientes.iterator();
 
@@ -182,8 +186,8 @@ public class PrincipalPaciente {
 			opcion = sc.next();
 
 		}
-		
-		if(opcion.equals("4")) {
+
+		if (opcion.equals("4")) {
 			System.out.println("Programa finalizado");
 		}
 	}

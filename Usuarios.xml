@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Usuario>
+    <ListaPacientes>
+        <Paciente DNI="79032491Y" nombreCompleto="Ivan Alarcón Herrera" telefono="633815885" fechaDeCita="05/05/2025" tratamiento="Radio"/>
+        <Paciente DNI="81283291Y" nombreCompleto="Jose Alarcón Herrera" telefono="633815885" fechaDeCita="05/05/2025" tratamiento="Radio"/>
+        <Paciente DNI="9112491Y" nombreCompleto="Fran Alarcón Herrera" telefono="633815885" fechaDeCita="05/05/2025" tratamiento="Radio"/>
+    </ListaPacientes>
+</Usuario>
