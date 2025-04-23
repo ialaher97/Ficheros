@@ -1,0 +1,5 @@
+hola: Saludo realizado entre dos personas
+adios: Despedida realizada entre dos personas
+correr: Acción de andar con velocidad
+risas: Sonido realizado cuando a una persona le causa gracia algo
+retar: desafiar a una persona

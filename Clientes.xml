@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Tienda>
+    <ListaClientes>
+        <Cliente Nombre="Ivan" Apellido="Alarcón" Edad="27"/>
+        <Cliente Nombre="Jose" Apellido="Fernandez" Edad="35"/>
+        <Cliente Nombre="Pedro" Apellido="Ruiz" Edad="18"/>
+    </ListaClientes>
+</Tienda>
